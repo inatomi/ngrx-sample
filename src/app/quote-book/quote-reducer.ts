@@ -1,12 +1,12 @@
+import { ActionReducer, Action } from '@ngrx/store';
 import * as QuoteActions from './quote-actions';
 
-const initialState = [];
-const quotes = (state = initialState, action) => {
+
+const quotes = (state :QuoteActions.Quote = null, action:Action) => {
   switch (action.type) {
     case QuoteActions.ADD_QUOTE: 
-      return state.concat({
-          text: action.text,
-        });
+      state = action.payload;
+      return state;
     default:
       return state;
   }

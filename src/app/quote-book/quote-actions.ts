@@ -15,6 +15,13 @@ export class QuoteActions{
     };
   };
 
+  updateQuote(quote:Quote){
+    return {
+      type: UPD_QUOTE,
+      Quote: quote
+    };
+  }
+
 }
 
 
