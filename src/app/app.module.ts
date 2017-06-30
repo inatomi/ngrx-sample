@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { QuoteBookComponent } from './quote-book/quote-book.component';
 import { QuoteService } from './quote-book/quote-service';
 import { QuoteActions } from './quote-book/quote-actions';
-import { rootReducer } from './quote-book/quote-reducer';
+import { quoteReducer } from './quote-book/quote-reducer';
 import {StoreModule} from "@ngrx/store";
 
 
@@ -20,7 +20,7 @@ import {StoreModule} from "@ngrx/store";
   imports: [
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    StoreModule.provideStore(rootReducer),
+    StoreModule.provideStore({ quote: quoteReducer}),
     MdInputModule,
     MdCardModule,
     MdButtonModule,

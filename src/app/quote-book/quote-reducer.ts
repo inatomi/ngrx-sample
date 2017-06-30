@@ -2,7 +2,7 @@ import { ActionReducer, Action } from '@ngrx/store';
 import * as QuoteActions from './quote-actions';
 
 
-const quotes = (state :QuoteActions.Quote = null, action:Action) => {
+export const quoteReducer = (state :QuoteActions.Quote = null, action:Action) => {
   switch (action.type) {
     case QuoteActions.ADD_QUOTE: 
       state = action.payload;
@@ -11,5 +11,3 @@ const quotes = (state :QuoteActions.Quote = null, action:Action) => {
       return state;
   }
 };
-
-export const rootReducer = {  };
