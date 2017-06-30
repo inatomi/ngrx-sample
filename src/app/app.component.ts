@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Store, Action, State} from '@ngrx/store';
+import { Quote,QuoteActions } from './quote-book/quote-actions';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  price:number;
+
+  constructor(private store: Store<Quote>){
+  }
+
+  subscribe(){
+    this.store.select('test')
+  }
 }

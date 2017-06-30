@@ -1,7 +1,8 @@
 <md-card>
 <md-input-container>
-  <input mdInput placeholder="price" value="30">
+  <input mdInput placeholder="price" [(ngModel)]="price" value="30">
 </md-input-container>
+ <button md-button (click)="subscribe()">subscribe</button>
 </md-card>
 
 <app-quote-book ></app-quote-book>

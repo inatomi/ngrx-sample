@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MdCardModule,MdInputModule } from '@angular/material';
+import { MdCardModule,MdInputModule,MdButtonModule } from '@angular/material';
 import { BrowserAnimationsModule,NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { QuoteBookComponent } from './quote-book/quote-book.component';
@@ -23,6 +23,7 @@ import {StoreModule} from "@ngrx/store";
     StoreModule.provideStore(rootReducer),
     MdInputModule,
     MdCardModule,
+    MdButtonModule,
     BrowserModule,
     FormsModule,
     HttpModule
